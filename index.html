@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Harsh Chauhan — Operations Associate at Amazon DBZ4 Kitzingen and B.Eng Business & Engineering student at THWS Schweinfurt, Germany. Available for Werkstudent and internship roles in Operations, Logistics, and Business Management across Bavaria." />
+  <meta name="description" content="Harsh Chauhan — Operations Associate at Amazon DBZ4 Kitzingen and B.Eng Business & Engineering student at THWS Schweinfurt, Germany. Builds AI automation tools. Available for Werkstudent and internship roles in Operations, Logistics, and Business Management across Bavaria." />
   <meta name="keywords" content="Harsh Chauhan, Operations Associate, Amazon DBZ4, THWS Schweinfurt, Werkstudent, Logistics, Business Engineering, Bavaria, Germany, Internship, Supply Chain" />
   <meta name="author" content="Harsh Chauhan" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -139,6 +139,14 @@ nav.scrolled{background:rgba(14,13,11,.94);border-bottom:1px solid rgba(247,242,
 .outbound .job-char [fill="#13100c"]{fill:#f7f2e8}
 .outbound .job-char [stroke="#13100c"]{stroke:#f7f2e8}
 
+/* PROJECTS */
+.proj-grid{display:grid;grid-template-columns:1fr;border:1px solid rgba(247,242,232,.07)}
+.job-card.proj{background:#0c0f16}
+.proj .job-accent{background:var(--blue)}
+.proj .job-list li::before{background:var(--blue);opacity:1}
+.proj-status{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:7px 13px;border:1px solid rgba(61,138,255,.3);background:rgba(61,138,255,.07);font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);border-radius:2px}
+.proj-status::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--blue);box-shadow:0 0 7px var(--blue);animation:blink 2s ease-in-out infinite;flex-shrink:0}
+
 /* EDUCATION */
 .edu-list{display:flex;flex-direction:column;border-top:1px solid rgba(247,242,232,.08)}
 .edu-item{display:grid;grid-template-columns:clamp(80px,12vw,160px) 1fr auto;gap:clamp(16px,3vw,48px);align-items:center;padding:clamp(24px,3.5vw,40px) 0;border-bottom:1px solid rgba(247,242,232,.08)}
@@ -216,6 +224,7 @@ footer a:hover{color:var(--orange)}
     <div class="nav-links">
       <a href="#about"      data-i18n="nav-about">About</a>
       <a href="#experience" data-i18n="nav-work">Work</a>
+      <a href="#projects"   data-i18n="nav-projects">Projects</a>
       <a href="#education"  data-i18n="nav-edu">Education</a>
       <a href="#contact"    data-i18n="nav-contact">Contact</a>
     </div>
@@ -473,6 +482,64 @@ footer a:hover{color:var(--orange)}
   </div>
 </section>
 
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <span class="sec-label" data-i18n="proj-label">things I build —</span>
+  <h2 class="sec-title"><span data-i18n="proj-title">STUFF I <em>SHIP</em></span></h2>
+  <p class="exp-note" data-i18n="proj-note">because refreshing job boards by hand is for people without a Raspberry Pi.</p>
+
+  <div class="proj-grid">
+    <article class="job-card proj reveal">
+      <div class="job-accent"></div>
+      <div>
+        <div class="job-co" data-i18n="proj1-co">Self-hosted · Raspberry Pi 4 · Python · Claude API</div>
+        <div class="job-header">
+          <h3 class="job-role" data-i18n="proj1-role">AI Job Hunter</h3>
+          <div class="job-period" data-i18n="proj1-period">May 2026 — Present</div>
+        </div>
+        <div class="job-sub" data-i18n="proj1-sub">Autonomous job monitoring · Linux service · 24/7</div>
+        <div class="proj-status" data-i18n="proj1-status">Live · runs 24/7</div>
+      </div>
+      <!-- Character: hacker at terminal with Raspberry Pi -->
+      <svg class="job-char" viewBox="0 0 180 230" fill="none" aria-hidden="true">
+        <rect x="4" y="118" width="82" height="54" rx="4" fill="#0a0908" stroke="#3d8aff" stroke-width="2"/>
+        <line x1="10" y1="130" x2="40" y2="130" stroke="#3dff9b" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="10" y1="140" x2="56" y2="140" stroke="#3dff9b" stroke-width="1.5" stroke-linecap="round" opacity=".7"/>
+        <line x1="10" y1="150" x2="36" y2="150" stroke="#ff5b1f" stroke-width="2" stroke-linecap="round"/>
+        <line x1="10" y1="160" x2="52" y2="160" stroke="#3dff9b" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+        <rect x="126" y="96" width="44" height="30" rx="3" fill="#ff3d8a" opacity=".85"/>
+        <rect x="132" y="102" width="8" height="8" rx="1.5" fill="#13100c" opacity=".6"/>
+        <rect x="148" y="102" width="8" height="8" rx="1.5" fill="#13100c" opacity=".6"/>
+        <line x1="134" y1="96" x2="134" y2="92" stroke="#ff3d8a" stroke-width="2"/>
+        <line x1="140" y1="96" x2="140" y2="92" stroke="#ff3d8a" stroke-width="2"/>
+        <line x1="146" y1="96" x2="146" y2="92" stroke="#ff3d8a" stroke-width="2"/>
+        <line x1="152" y1="96" x2="152" y2="92" stroke="#ff3d8a" stroke-width="2"/>
+        <circle cx="112" cy="54" r="28" fill="#f7f2e8"/>
+        <rect x="97" y="48" width="12" height="9" rx="2.5" fill="none" stroke="#3d8aff" stroke-width="2"/>
+        <rect x="111" y="48" width="12" height="9" rx="2.5" fill="none" stroke="#3d8aff" stroke-width="2"/>
+        <line x1="109" y1="52.5" x2="111" y2="52.5" stroke="#3d8aff" stroke-width="1.5"/>
+        <line x1="91" y1="52.5" x2="97" y2="52.5" stroke="#3d8aff" stroke-width="1.5" opacity=".5"/>
+        <line x1="123" y1="52.5" x2="128" y2="52.5" stroke="#3d8aff" stroke-width="1.5" opacity=".5"/>
+        <circle cx="103" cy="52.5" r="3" fill="#13100c"/>
+        <circle cx="117" cy="52.5" r="3" fill="#13100c"/>
+        <path d="M104 65 Q112 71 120 65" stroke="#13100c" stroke-width="2.5" stroke-linecap="round"/>
+        <rect x="88" y="80" width="48" height="46" rx="7" fill="#3d8aff"/>
+        <path d="M90 86 L16 120" stroke="#f7f2e8" stroke-width="10" stroke-linecap="round"/>
+        <path d="M134 86 L148 98" stroke="#f7f2e8" stroke-width="10" stroke-linecap="round"/>
+        <path d="M102 126 L96 192" stroke="#f7f2e8" stroke-width="10" stroke-linecap="round"/>
+        <path d="M122 126 L128 192" stroke="#f7f2e8" stroke-width="10" stroke-linecap="round"/>
+      </svg>
+      <ul class="job-list">
+        <li data-i18n="proj1-b1">Built an autonomous job-monitoring system that runs 24/7 on a self-hosted Raspberry Pi 4 as a Linux service — survives reboots and power cuts, restarts itself</li>
+        <li data-i18n="proj1-b2">Pulls fresh Werkstudent and internship listings every 30 minutes from multiple job boards across a 50 km radius of Schweinfurt, filtered to the last 24 hours so I apply first</li>
+        <li data-i18n="proj1-b3">Scores every listing 1–10 against my own profile using the Claude API (LLM reasoning), and pushes only strong matches (7+) straight to my phone with the reasoning attached</li>
+        <li data-i18n="proj1-b4">First live run scored a 10/10: a Werkstudent role at SKF in Schweinfurt — Python automation, my exact field</li>
+        <li data-i18n="proj1-b5">Stack: Python · web scraping · REST APIs · LLM / prompt engineering · Linux (systemd) · Raspberry Pi</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
 <!-- EDUCATION -->
 <section class="section" id="education">
   <span class="sec-label" data-i18n="edu-label">academic path —</span>
@@ -558,6 +625,12 @@ footer a:hover{color:var(--orange)}
     <div class="bento-tile bento-2x1"><div class="bento-name" data-i18n="sk10">Content &amp; Campaigns</div></div>
     <div class="bento-tile"><div class="bento-name" data-i18n="sk7">Last-Mile Delivery</div></div>
     <div class="bento-tile"><div class="bento-name" data-i18n="sk13">Canva &amp; Design</div></div>
+    <div class="bento-tile" style="background:rgba(255,61,138,.04);border-color:rgba(255,61,138,.12)"><span class="bento-tag" style="color:var(--pink)">Running ↗</span><div class="bento-name" data-i18n="sk15">Raspberry Pi</div></div>
+    <div class="bento-tile" style="background:rgba(61,138,255,.05);border-color:rgba(61,138,255,.14)"><span class="bento-tag" style="color:var(--blue)">AI</span><div class="bento-name" data-i18n="sk16">Claude API / LLM</div></div>
+    <div class="bento-tile"><div class="bento-name" data-i18n="sk17">Web Scraping</div></div>
+    <div class="bento-tile"><div class="bento-name" data-i18n="sk18">Linux / systemd</div></div>
+    <div class="bento-tile"><div class="bento-name" data-i18n="sk19">Automation</div></div>
+    <div class="bento-tile"><div class="bento-name" data-i18n="sk20">REST APIs</div></div>
   </div>
 </section>
 
@@ -629,7 +702,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
 const i18n = {
   en: {
-    'nav-about':'About','nav-work':'Work','nav-edu':'Education','nav-contact':'Contact',
+    'nav-about':'About','nav-work':'Work','nav-projects':'Projects','nav-edu':'Education','nav-contact':'Contact',
     'hero-pre':'operations guy · student · surviving germany, somehow ✦',
     'hero-tagline':'Operations Associate @ <span>Amazon DBZ4.</span><br/>Business &amp; Engineering @ <span>THWS.</span><br/>Based in Schweinfurt, Bavaria.',
     'sticker-1':'OPEN TO','sticker-2':'WERKSTUDENT','sticker-3':'ROLES →',
@@ -671,13 +744,21 @@ const i18n = {
     'sk5':'Safety &amp; Compliance','sk6':'Yard &amp; Dock Coordination','sk7':'Last-Mile Delivery',
     'sk8':'Digital Marketing','sk9':'SEO Strategy','sk10':'Content &amp; Campaign Mgmt','sk11':'Microsoft Excel',
     'sk12':'Python (learning)','sk13':'Canva / Design basics','sk14':'Business Strategy',
+    'sk15':'Raspberry Pi','sk16':'Claude API / LLM','sk17':'Web Scraping','sk18':'Linux / systemd','sk19':'Automation','sk20':'REST APIs',
     'lang-label':'how I speak —','lang-title':'LANG<em>UAGES</em>',
     'lang1-level':'Professional Working · IELTS 7.0','lang2-level':'Elementary · A2 · Goethe 82/100',
     'lang3-level':'Native · Mother tongue','lang4-level':'Native · Fluent','lang5-level':'Native · Heritage',
     'contact-label':'let\'s connect —','contact-sub':'Open to Werkstudent positions and internships in Operations, Logistics, or Business Management in Bavaria, Germany.',
+    'proj-label':'things I build —','proj-title':'STUFF I <em>SHIP</em>','proj-note':'because refreshing job boards by hand is for people without a Raspberry Pi.',
+    'proj1-co':'Self-hosted · Raspberry Pi 4 · Python · Claude API','proj1-role':'AI Job Hunter','proj1-period':'May 2026 — Present','proj1-sub':'Autonomous job monitoring · Linux service · 24/7','proj1-status':'Live · runs 24/7',
+    'proj1-b1':'Built an autonomous job-monitoring system that runs 24/7 on a self-hosted Raspberry Pi 4 as a Linux service — survives reboots and power cuts, restarts itself',
+    'proj1-b2':'Pulls fresh Werkstudent and internship listings every 30 minutes from multiple job boards across a 50 km radius of Schweinfurt, filtered to the last 24 hours so I apply first',
+    'proj1-b3':'Scores every listing 1–10 against my own profile using the Claude API (LLM reasoning), and pushes only strong matches (7+) straight to my phone with the reasoning attached',
+    'proj1-b4':'First live run scored a 10/10: a Werkstudent role at SKF in Schweinfurt — Python automation, my exact field',
+    'proj1-b5':'Stack: Python · web scraping · REST APIs · LLM / prompt engineering · Linux (systemd) · Raspberry Pi',
   },
   de: {
-    'nav-about':'Über mich','nav-work':'Erfahrung','nav-edu':'Ausbildung','nav-contact':'Kontakt',
+    'nav-about':'Über mich','nav-work':'Erfahrung','nav-projects':'Projekte','nav-edu':'Ausbildung','nav-contact':'Kontakt',
     'hero-pre':'operations-typ · student · überlebe deutschland ✦',
     'hero-tagline':'Operations Associate @ <span>Amazon DBZ4.</span><br/>Wirtschaftsingenieurwesen @ <span>THWS.</span><br/>In Schweinfurt, Bayern.',
     'sticker-1':'OFFEN FÜR','sticker-2':'WERKSTUDENT-','sticker-3':'STELLEN →',
@@ -718,13 +799,21 @@ const i18n = {
     'sk5':'Sicherheit &amp; Compliance','sk6':'Yard &amp; Dock-Koordination','sk7':'Last-Mile-Lieferung',
     'sk8':'Digitales Marketing','sk9':'SEO-Strategie','sk10':'Content &amp; Kampagnenmanagement','sk11':'Microsoft Excel',
     'sk12':'Python (lernend)','sk13':'Canva / Design-Grundlagen','sk14':'Unternehmensstrategie',
+    'sk15':'Raspberry Pi','sk16':'Claude API / LLM','sk17':'Web Scraping','sk18':'Linux / systemd','sk19':'Automatisierung','sk20':'REST APIs',
     'lang-label':'wie ich spreche —','lang-title':'SPRACH<em>EN</em>',
     'lang1-level':'Beruflich · IELTS 7.0','lang2-level':'Grundkenntnisse · A2 · Goethe 82/100',
     'lang3-level':'Muttersprache','lang4-level':'Muttersprache · Fließend','lang5-level':'Muttersprache · Kulturerbe',
     'contact-label':'in kontakt treten —','contact-sub':'Offen für Werkstudentenstellen und Praktika in Operations, Logistik oder BWL in Bayern.',
+    'proj-label':'was ich baue —','proj-title':'WAS ICH <em>BAUE</em>','proj-note':'weil man Stellenportale nicht von Hand aktualisiert, wenn man einen Raspberry Pi hat.',
+    'proj1-co':'Self-hosted · Raspberry Pi 4 · Python · Claude API','proj1-role':'AI Job Hunter','proj1-period':'Mai 2026 — heute','proj1-sub':'Autonomes Job-Monitoring · Linux-Dienst · 24/7','proj1-status':'Live · läuft 24/7',
+    'proj1-b1':'Autonomes Job-Monitoring-System auf einem selbst-gehosteten Raspberry Pi 4 als Linux-Dienst aufgebaut — übersteht Neustarts und Stromausfälle, startet sich selbst neu',
+    'proj1-b2':'Ruft alle 30 Minuten neue Werkstudenten- und Praktikumsangebote von mehreren Jobbörsen in einem 50-km-Radius um Schweinfurt ab — gefiltert auf die letzten 24 Stunden',
+    'proj1-b3':'Bewertet jede Stelle 1–10 gegen das eigene Profil mit der Claude API (LLM-Reasoning) und sendet nur starke Treffer (7+) direkt aufs Handy — mit der Begründung dabei',
+    'proj1-b4':'Erster Live-Lauf: Score 10/10 — eine Werkstudentenstelle bei SKF in Schweinfurt · Python-Automatisierung, genau das Fachgebiet',
+    'proj1-b5':'Stack: Python · Web Scraping · REST APIs · LLM / Prompt Engineering · Linux (systemd) · Raspberry Pi',
   },
   hi: {
-    'nav-about':'परिचय','nav-work':'काम','nav-edu':'शिक्षा','nav-contact':'संपर्क',
+    'nav-about':'परिचय','nav-work':'काम','nav-projects':'प्रोजेक्ट्स','nav-edu':'शिक्षा','nav-contact':'संपर्क',
     'hero-pre':'ऑपरेशंस वाला · छात्र · जर्मनी में टिका हुआ, किसी तरह ✦',
     'hero-tagline':'Operations Associate @ <span>Amazon DBZ4.</span><br/>Business &amp; Engineering @ <span>THWS.</span><br/>Schweinfurt, Bavaria में रहता हूँ।',
     'sticker-1':'वर्कस्टूडेंट','sticker-2':'के लिए','sticker-3':'तैयार हूँ →',
@@ -766,10 +855,18 @@ const i18n = {
     'sk5':'Safety &amp; Compliance','sk6':'Yard &amp; Dock Coordination','sk7':'Last-Mile Delivery',
     'sk8':'Digital Marketing','sk9':'SEO Strategy','sk10':'Content &amp; Campaign Management','sk11':'Microsoft Excel',
     'sk12':'Python (सीख रहा हूँ)','sk13':'Canva / Design basics','sk14':'Business Strategy',
+    'sk15':'Raspberry Pi','sk16':'Claude API / LLM','sk17':'Web Scraping','sk18':'Linux / systemd','sk19':'ऑटोमेशन','sk20':'REST APIs',
     'lang-label':'मैं कैसे बोलता हूँ —','lang-title':'भाषा<em>एँ</em>',
     'lang1-level':'Professional Working · IELTS 7.0','lang2-level':'Elementary · A2 · Goethe 82/100',
     'lang3-level':'मातृभाषा','lang4-level':'मातृभाषा · धाराप्रवाह','lang5-level':'मातृभाषा · विरासत',
     'contact-label':'बात करते हैं —','contact-sub':'Bavaria, जर्मनी में Operations, Logistics या Business Management में Werkstudent positions और internships के लिए उपलब्ध हूँ।',
+    'proj-label':'जो बनाता हूँ —','proj-title':'मैं क्या <em>बनाता</em> हूँ','proj-note':'क्योंकि job boards हाथ से refresh करना उनका काम है जिनके पास Raspberry Pi नहीं है।',
+    'proj1-co':'Self-hosted · Raspberry Pi 4 · Python · Claude API','proj1-role':'AI Job Hunter','proj1-period':'मई 2026 — अभी','proj1-sub':'Autonomous job monitoring · Linux service · 24/7','proj1-status':'चालू है · 24/7 चलता है',
+    'proj1-b1':'एक autonomous job-monitoring system बनाया जो खुद-hosted Raspberry Pi 4 पर Linux service के रूप में चलता है — reboot और power cuts से बचता है, खुद restart होता है',
+    'proj1-b2':'Schweinfurt के 50 km दायरे में कई job boards से हर 30 मिनट में नए Werkstudent और internship listings खींचता है — पिछले 24 घंटों का filtered data',
+    'proj1-b3':'Claude API (LLM reasoning) से हर listing को 1–10 score करता है और सिर्फ strong matches (7+) को reasoning के साथ सीधे फ़ोन पर भेजता है',
+    'proj1-b4':'पहले live run में 10/10 score: SKF Schweinfurt में Python automation वाली Werkstudent role — बिल्कुल मेरे field की',
+    'proj1-b5':'Stack: Python · web scraping · REST APIs · LLM / prompt engineering · Linux (systemd) · Raspberry Pi',
   }
 };
 

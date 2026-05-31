@@ -146,6 +146,9 @@ nav.scrolled{background:rgba(14,13,11,.94);border-bottom:1px solid rgba(247,242,
 .proj .job-list li::before{background:var(--blue);opacity:1}
 .proj-status{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:7px 13px;border:1px solid rgba(61,138,255,.3);background:rgba(61,138,255,.07);font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);border-radius:2px}
 .proj-status::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--blue);box-shadow:0 0 7px var(--blue);animation:blink 2s ease-in-out infinite;flex-shrink:0}
+.proj-terminal{margin:clamp(12px,1.5vw,16px) 0;background:#06080d;border:1px solid rgba(61,138,255,.18);padding:10px 14px;font-family:var(--fm);font-size:10.5px;line-height:1.8;border-left:2px solid var(--blue)}
+.proj-terminal-prompt{color:var(--green);display:block;margin-bottom:2px}
+.proj-terminal-out{color:rgba(247,242,232,.45);display:block;padding-left:2px}
 
 /* EDUCATION */
 .edu-list{display:flex;flex-direction:column;border-top:1px solid rgba(247,242,232,.08)}
@@ -537,6 +540,58 @@ footer a:hover{color:var(--orange)}
         <li data-i18n="proj1-b5">Stack: Python · web scraping · REST APIs · LLM / prompt engineering · Linux (systemd) · Raspberry Pi</li>
       </ul>
     </article>
+
+    <article class="job-card proj reveal">
+      <div class="job-accent"></div>
+      <div>
+        <div class="job-co" data-i18n="proj2-co">Self-hosted · Raspberry Pi 4 · Tailscale · Linux</div>
+        <div class="job-header">
+          <h3 class="job-role" data-i18n="proj2-role">Self-Hosted VPN</h3>
+          <div class="job-period" data-i18n="proj2-period">2026 — Present</div>
+        </div>
+        <div class="job-sub" data-i18n="proj2-sub">Tailscale exit node · IP forwarding · systemd · 24/7</div>
+        <div class="proj-status" data-i18n="proj2-status">Live · exit node active</div>
+      </div>
+      <!-- Character: same Pi board bottom-left (same server), shield+lock top-right -->
+      <svg class="job-char" viewBox="0 0 180 230" fill="none" aria-hidden="true">
+        <path d="M132 74 Q132 58 149 52 Q166 58 166 74 Q166 94 149 106 Q132 94 132 74 Z" fill="rgba(61,138,255,.08)" stroke="#3d8aff" stroke-width="1.5"/>
+        <rect x="141" y="76" width="16" height="13" rx="3" fill="#3d8aff" opacity=".85"/>
+        <path d="M144 76 Q144 69 149 69 Q154 69 154 76" stroke="#3d8aff" stroke-width="2" fill="none"/>
+        <circle cx="149" cy="83" r="2.5" fill="#f7f2e8" opacity=".6"/>
+        <rect x="4" y="164" width="60" height="38" rx="3" fill="#0a0908" stroke="#3d8aff" stroke-width="1.5"/>
+        <circle cx="14" cy="172" r="3" fill="#3dff9b" opacity=".7"/>
+        <circle cx="24" cy="172" r="3" fill="#3dff9b" opacity=".4"/>
+        <circle cx="34" cy="172" r="3" fill="#ff5b1f" opacity=".5"/>
+        <rect x="8" y="180" width="10" height="6" rx="1" fill="#3d8aff" opacity=".5"/>
+        <rect x="22" y="180" width="14" height="6" rx="1" fill="#3d8aff" opacity=".3"/>
+        <rect x="40" y="180" width="18" height="8" rx="1" fill="#ffd83d" opacity=".25"/>
+        <line x1="4" y1="120" x2="22" y2="120" stroke="#3dff9b" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+        <line x1="28" y1="120" x2="46" y2="120" stroke="#ffd83d" stroke-width="1.5" stroke-linecap="round" opacity=".3"/>
+        <line x1="4" y1="130" x2="32" y2="130" stroke="#3dff9b" stroke-width="1.5" stroke-linecap="round" opacity=".35"/>
+        <line x1="4" y1="140" x2="16" y2="140" stroke="#ff5b1f" stroke-width="2" stroke-linecap="round" opacity=".25"/>
+        <line x1="4" y1="150" x2="28" y2="150" stroke="#3dff9b" stroke-width="1.5" stroke-linecap="round" opacity=".3"/>
+        <circle cx="97" cy="52" r="27" fill="#f7f2e8"/>
+        <circle cx="89" cy="49" r="4.5" fill="#13100c"/>
+        <circle cx="105" cy="49" r="4.5" fill="#13100c"/>
+        <path d="M91 62 Q97 68 103 62" stroke="#13100c" stroke-width="2.5" stroke-linecap="round"/>
+        <rect x="73" y="77" width="48" height="46" rx="7" fill="#3d8aff"/>
+        <path d="M75 86 L30 164" stroke="#f7f2e8" stroke-width="10" stroke-linecap="round"/>
+        <path d="M119 84 L134 74" stroke="#f7f2e8" stroke-width="10" stroke-linecap="round"/>
+        <path d="M87 123 L81 192" stroke="#f7f2e8" stroke-width="10" stroke-linecap="round"/>
+        <path d="M107 123 L113 192" stroke="#f7f2e8" stroke-width="10" stroke-linecap="round"/>
+      </svg>
+      <div class="proj-terminal">
+        <span class="proj-terminal-prompt">$ tailscale status</span>
+        <span class="proj-terminal-out">100.x.x.x&nbsp;&nbsp; raspberrypi&nbsp;&nbsp; linux&nbsp;&nbsp; -&nbsp;&nbsp; offers exit node</span>
+      </div>
+      <ul class="job-list">
+        <li data-i18n="proj2-b1">Same Raspberry Pi 4 running headless 24/7 — reconfigured as a Tailscale exit node, so all internet traffic from my phone or laptop on any public network routes through home before touching the internet</li>
+        <li data-i18n="proj2-b2">Encrypts the device-to-server hop on university WiFi, workplace hotspots, and café networks — protects against passive packet sniffing and man-in-the-middle attacks on open networks</li>
+        <li data-i18n="proj2-b3">Set up over SSH: IP forwarding enabled at kernel level (net.ipv4.ip_forward=1), Tailscale daemon managed by systemd — restarts automatically after reboots and power cuts</li>
+        <li data-i18n="proj2-b4">What it doesn't do: websites see my home IP, not an anonymous proxy pool. The goal is traffic security on untrusted networks, not identity masking — that distinction matters and I know it</li>
+        <li data-i18n="proj2-b5">Stack: Linux networking · IP forwarding · Tailscale · systemd · network security fundamentals</li>
+      </ul>
+    </article>
   </div>
 </section>
 
@@ -756,6 +811,12 @@ const i18n = {
     'proj1-b3':'Scores every listing 1–10 against my own profile using the Claude API (LLM reasoning), and pushes only strong matches (7+) straight to my phone with the reasoning attached',
     'proj1-b4':'First live run scored a 10/10: a Werkstudent role at SKF in Schweinfurt — Python automation, my exact field',
     'proj1-b5':'Stack: Python · web scraping · REST APIs · LLM / prompt engineering · Linux (systemd) · Raspberry Pi',
+    'proj2-co':'Self-hosted · Raspberry Pi 4 · Tailscale · Linux','proj2-role':'Self-Hosted VPN','proj2-period':'2026 — Present','proj2-sub':'Tailscale exit node · IP forwarding · systemd · 24/7','proj2-status':'Live · exit node active',
+    'proj2-b1':'Same Raspberry Pi 4 running headless 24/7 — reconfigured as a Tailscale exit node, so all internet traffic from my phone or laptop on any public network routes through home before touching the internet',
+    'proj2-b2':'Encrypts the device-to-server hop on university WiFi, workplace hotspots, and café networks — protects against passive packet sniffing and man-in-the-middle attacks on open networks',
+    'proj2-b3':'Set up over SSH: IP forwarding enabled at kernel level (net.ipv4.ip_forward=1), Tailscale daemon managed by systemd — restarts automatically after reboots and power cuts',
+    'proj2-b4':'What it doesn\'t do: websites see my home IP, not an anonymous proxy pool. The goal is traffic security on untrusted networks, not identity masking — that distinction matters and I know it',
+    'proj2-b5':'Stack: Linux networking · IP forwarding · Tailscale · systemd · network security fundamentals',
   },
   de: {
     'nav-about':'Über mich','nav-work':'Erfahrung','nav-projects':'Projekte','nav-edu':'Ausbildung','nav-contact':'Kontakt',
@@ -811,6 +872,12 @@ const i18n = {
     'proj1-b3':'Bewertet jede Stelle 1–10 gegen das eigene Profil mit der Claude API (LLM-Reasoning) und sendet nur starke Treffer (7+) direkt aufs Handy — mit der Begründung dabei',
     'proj1-b4':'Erster Live-Lauf: Score 10/10 — eine Werkstudentenstelle bei SKF in Schweinfurt · Python-Automatisierung, genau das Fachgebiet',
     'proj1-b5':'Stack: Python · Web Scraping · REST APIs · LLM / Prompt Engineering · Linux (systemd) · Raspberry Pi',
+    'proj2-co':'Self-hosted · Raspberry Pi 4 · Tailscale · Linux','proj2-role':'Self-Hosted VPN','proj2-period':'2026 — heute','proj2-sub':'Tailscale Exit Node · IP-Weiterleitung · systemd · 24/7','proj2-status':'Live · Exit Node aktiv',
+    'proj2-b1':'Derselbe Raspberry Pi 4, headless 24/7 — als Tailscale Exit Node konfiguriert, sodass aller Internet-Traffic von Smartphone oder Laptop in öffentlichen Netzwerken zuerst über den Heimserver geleitet wird',
+    'proj2-b2':'Verschlüsselt den Gerät-zu-Server-Hop in Uni-WLANs, Arbeits-Hotspots und Café-Netzen — schützt vor passivem Packet-Sniffing und Man-in-the-Middle-Angriffen auf offenen Netzwerken',
+    'proj2-b3':'Via SSH eingerichtet: IP-Weiterleitung auf Kernel-Ebene aktiviert (net.ipv4.ip_forward=1), Tailscale-Daemon per systemd verwaltet — startet nach Neustarts und Stromausfällen automatisch neu',
+    'proj2-b4':'Was es nicht tut: Websites sehen die Heim-IP, keinen anonymen Proxy-Pool. Ziel ist Datensicherheit in unsicheren Netzwerken, nicht Anonymisierung — dieser Unterschied ist mir bewusst',
+    'proj2-b5':'Stack: Linux-Netzwerk · IP-Weiterleitung · Tailscale · systemd · Netzwerksicherheit',
   },
   hi: {
     'nav-about':'परिचय','nav-work':'काम','nav-projects':'प्रोजेक्ट्स','nav-edu':'शिक्षा','nav-contact':'संपर्क',
@@ -867,6 +934,12 @@ const i18n = {
     'proj1-b3':'Claude API (LLM reasoning) से हर listing को 1–10 score करता है और सिर्फ strong matches (7+) को reasoning के साथ सीधे फ़ोन पर भेजता है',
     'proj1-b4':'पहले live run में 10/10 score: SKF Schweinfurt में Python automation वाली Werkstudent role — बिल्कुल मेरे field की',
     'proj1-b5':'Stack: Python · web scraping · REST APIs · LLM / prompt engineering · Linux (systemd) · Raspberry Pi',
+    'proj2-co':'Self-hosted · Raspberry Pi 4 · Tailscale · Linux','proj2-role':'Self-Hosted VPN','proj2-period':'2026 — अभी','proj2-sub':'Tailscale exit node · IP forwarding · systemd · 24/7','proj2-status':'चालू · exit node active',
+    'proj2-b1':'वही Raspberry Pi 4 जो 24/7 headless चलता है — Tailscale exit node के रूप में configure किया, ताकि किसी भी public network पर phone या laptop का सारा internet traffic घर के server से होकर internet तक पहुँचे',
+    'proj2-b2':'University WiFi, workplace hotspot और café networks पर device से server तक का hop encrypt होता है — open networks पर passive sniffing और man-in-the-middle attacks से सुरक्षा',
+    'proj2-b3':'SSH से setup किया: kernel level पर IP forwarding enable (net.ipv4.ip_forward=1), Tailscale daemon को systemd manage करता है — reboot और power cut के बाद खुद restart होता है',
+    'proj2-b4':'यह क्या नहीं करता: websites home IP देखते हैं, कोई anonymous proxy pool नहीं। मकसद untrusted networks पर traffic security है, anonymization नहीं — यह फ़र्क मुझे पता है',
+    'proj2-b5':'Stack: Linux networking · IP forwarding · Tailscale · systemd · network security fundamentals',
   }
 };
 
